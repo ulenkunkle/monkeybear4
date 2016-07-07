@@ -21,14 +21,14 @@ while True:
         roi_gray = gray[y:y+h, x:x+w]
         roi_color = img[y:y+h, x:x+w]
         font = cv2.FONT_HERSHEY_SIMPLEX
-        cv2.putText(img,'ISIS -->',(x-w,y-h+120), font, 0.5, (11,255,255), 2, cv2.LINE_AA)
+        cv2.putText(img,'GOVT SNITCH -->',(x-w,y-h+120), font, 0.5, (11,255,255), 2, cv2.LINE_AA)
         eyes = eye_cascade.detectMultiScale(roi_gray)
 
 
         for (ex, ey, ew, eh) in eyes:
             cv2.rectangle(roi_color, (ex, ey), (ex+ew,ey+eh), (0,255,0), 2)
             font = cv2.FONT_HERSHEY_SIMPLEX
-            cv2.putText(img,'   <----ISIS',(x+w,y+h-80), font, 0.5, (2,2,255), 2, cv2.LINE_AA)
+            cv2.putText(img,'   <---DEDMAN',(x+w,y+h-80), font, 0.5, (2,2,255), 2, cv2.LINE_AA)
     out.write(img)
     cv2.imshow('img',img)
 
